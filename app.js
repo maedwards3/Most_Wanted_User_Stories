@@ -1,5 +1,4 @@
 "use strict";
-
 function searchByName(){
     // Grabbing the values from our nameForm form and inputs.
     let firstNameInput = document.forms['nameForm']['fname'].value;
