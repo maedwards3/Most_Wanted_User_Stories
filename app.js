@@ -19,7 +19,6 @@ function searchByName(){
     }else{
         console.log('Sorry, looks like there is no one with that name.');
     }
-<<<<<<< HEAD
 }
 
 function renderTable(){
@@ -28,13 +27,18 @@ function renderTable(){
         return concat += `<tr>
         <td>${person.id}</td>
         <td>${person.firstName}</td>
+        <td>${person.lastName}</td>
+        <td>${person.gender}</td>
+        <td>${person.dob}</td>
+        <td>${person.height}</td>
+        <td>${person.weight}</td>
+        <td>${person.eyeColor}</td>
+        <td>${person.occupation}</td>
+        <td>${person.parents}</td>
+        <td>${person.currentSpouse}</td>
         </tr>`
     })
     document.getElementById("body").innerHTML = concat
 }
 
 renderTable()
-
-=======
-}
->>>>>>> ac27a6c35832111a653fb9dd49d3da23bccb73e2
