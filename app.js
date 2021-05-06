@@ -18,4 +18,22 @@ function searchByName(){
     }else{
         console.log('Sorry, looks like there is no one with that name.');
     }
+<<<<<<< HEAD
 }
+
+function renderTable(){
+    let concat = ''
+    people.map(function (person){
+        return concat += `<tr>
+        <td>${person.id}</td>
+        <td>${person.firstName}</td>
+        </tr>`
+    })
+    document.getElementById("body").innerHTML = concat
+}
+
+renderTable()
+
+=======
+}
+>>>>>>> ac27a6c35832111a653fb9dd49d3da23bccb73e2
