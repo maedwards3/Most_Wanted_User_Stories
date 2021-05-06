@@ -19,6 +19,7 @@ function searchByName(){
     }else{
         console.log('Sorry, looks like there is no one with that name.');
     }
+<<<<<<< HEAD
 }
 
 function renderTable(){
@@ -34,3 +35,6 @@ function renderTable(){
 
 renderTable()
 
+=======
+}
+>>>>>>> ac27a6c35832111a653fb9dd49d3da23bccb73e2
