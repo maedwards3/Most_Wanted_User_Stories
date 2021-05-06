@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Most Wanted App</title>
-    <link href="style/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div>
@@ -15,5 +15,52 @@
             <input type="button" name="single-search-button" value="Submit">
         </form>
     </div>
+
+    <h1>Most Wanted App</h1>
+    <form>
+        <form id="nameForm">
+            <label for="id">ID Number:</label><br>
+            <input type="number" id="id" name="id" placeholder="Enter an ID number" value="">
+            <input type="button" onclick="searchbyID()" value="Submit"><br>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First name" value="">
+            <input type="button" onclick="searchbyFirstName()" value="Submit"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Last name" value="">
+            <input type="button" onclick="searchbyLastName()" value="Submit"><br>
+            <label for="gender">Gender:</label><br>
+            <select name="pets" id="pet-select">
+                <option value="">Select a gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="button" onclick="searchbyGender()" value="Submit"><br>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="Date" id="dob" name="dob" value="">
+            <input type="button" onclick="searchByDob()" value="Submit"><br>
+            <label for="dob">Height:</label><br>
+            <input type="number" id="height" name="height" placeholder="Enter persons height" value="">
+            <input type="button" onclick="searchbyHeight()" value="Submit"><br>
+            <label for="weight">Weight:</label><br>
+            <input type="number" id="weight" name="weight" placeholder="160" value="">
+            <input type="button" onclick="searchByWeight()" value="Submit"><br>
+            <label for="eyecolor">Eye Color:</label><br>
+            <input type="text" id="eyecolor" name="eyecolor" placeholder="Brown" value="">
+            <input type="button" onclick="searchbyEyeColor()" value="Submit"><br>
+            <label for="eyecolor">Occupation:</label><br>
+            <input type="text" id="occupation" name="occupation" placeholder="Programmer" value="">
+            <input type="button" onclick="searchbyOccupation()" value="Submit"><br>
+            <label for="parents">Parents:</label><br>
+            <input type="text" id="parents" name="parents" placeholder="Enter the parents name" value="">
+            <input type="button" onclick="searchByParents()" value="Submit"><br>
+            <label for="spouse">Spouse</label><br>
+            <input type="text" id="spouse" name="spouse" placeholder="Current spouse" value="">
+            <input type="button" onclick="searchBySpouse()" value="Submit"><br>
+        </form> 
+    </form>
+    
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    
 </body>
 </html>
