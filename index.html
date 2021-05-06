@@ -20,9 +20,18 @@
     </div>
 
     <br>
-    
+
+    <form id="nameForm">
+        <label for="nameForm">Search by first and last name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="First name" value=""><br><br>
+        <input type="text" id="lname" name="lname" placeholder="Last name" value=""><br><br>
+        <input type="button" onclick="searchByName()" value="Submit">
+    </form> 
+
+    <br>
+
     <form>
-        <form id="multipleForm">
+        <form id="variousForm">
             <label for="id">ID Number:</label><br>
             <input type="number" id="id" name="id" placeholder="Enter an ID number" value="">
             <input type="button" onclick="searchbyID()" value="Submit"><br>
