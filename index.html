@@ -11,7 +11,7 @@
 
     <h1>Most Wanted App</h1>
     <form>
-        <form id="nameForm">
+        <form id="multipleForm">
             <label for="id">ID Number:</label><br>
             <input type="number" id="id" name="id" placeholder="Enter an ID number" value="">
             <input type="button" onclick="searchbyID()" value="Submit"><br>
@@ -22,7 +22,7 @@
             <input type="text" id="lname" name="lname" placeholder="Last name" value="">
             <input type="button" onclick="searchbyLastName()" value="Submit"><br>
             <label for="gender">Gender:</label><br>
-            <select name="pets" id="pet-select">
+            <select name="gender" id="gender-select">
                 <option value="">Select a gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -51,9 +51,22 @@
             <input type="button" onclick="searchBySpouse()" value="Submit"><br>
         </form> 
     </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody id=body>
+
+        </tbody>
+    </table>
     
     <script src="data.js"></script>
     <script src="app.js"></script>
-    
+
 </body>
 </html>
