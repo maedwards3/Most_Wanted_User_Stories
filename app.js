@@ -24,6 +24,7 @@ function renderTable(){
     let concat = ''
     people.map(function (person){
         return concat += `<tr>
+        <td><img src="${person.photo}"></td>
         <td>${person.id}</td>
         <td>${person.firstName}</td>
         <td>${person.lastName}</td>
