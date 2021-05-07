@@ -24,7 +24,6 @@ function renderTable(){
     let concat = ''
     people.map(function (person){
         return concat += `<tr>
-        <td><img src="${person.photo}"></td>
         <td>${person.id}</td>
         <td>${person.firstName}</td>
         <td>${person.lastName}</td>
@@ -44,7 +43,7 @@ function renderTable(){
 renderTable()
 
 function singleSearchBar() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("singleDropdown").classList.toggle("show");
   }
   
   function filterFunction() {
