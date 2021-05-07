@@ -26,6 +26,15 @@ function renderTable(){
         return concat += `<tr>
         <td>${person.id}</td>
         <td>${person.firstName}</td>
+        <td>${person.lastName}</td>
+        <td>${person.gender}</td>
+        <td>${person.dob}</td>
+        <td>${person.height}</td>
+        <td>${person.weight}</td>
+        <td>${person.eyeColor}</td>
+        <td>${person.occupation}</td>
+        <td>${person.parents}</td>
+        <td>${person.currentSpouse}</td>
         </tr>`
     })
     document.getElementById("body").innerHTML = concat
@@ -33,3 +42,22 @@ function renderTable(){
 
 renderTable()
 
+function singleSearchBar() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
