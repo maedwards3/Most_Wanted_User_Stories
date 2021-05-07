@@ -38,50 +38,31 @@
         <input type="text" class="form-control mb-2" id="fname" name="fname" placeholder="First name" value="">
         <input type="text" class="form-control mb-2" id="lname" name="lname" placeholder="Last name" value="">
         <input type="button" class="btn btn-danger" onclick="this.form.reset();" value="Clear Form">
-        <input type="button" class="btn btn-primary" onclick="searchByName()" value="Search">
+        <input type="button" class="btn btn-primary" onclick="filteredPeople()" value="Search">
     </form> 
 
     <br>
 
     <form>
-        <form id="variousForm">
-            <label for="id">ID Number:</label><br>
-            <input type="number" id="id" name="id" placeholder="Enter an ID number" value="">
-            <input type="button" onclick="searchbyID()" value="Submit"><br>
-            <label for="fname">First Name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="First name" value="">
-            <input type="button" onclick="searchbyFirstName()" value="Submit"><br>
-            <label for="lname">Last Name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Last name" value="">
-            <input type="button" onclick="searchbyLastName()" value="Submit"><br>
-            <label for="gender">Gender:</label><br>
-            <select name="gender" class="custom-select mr-sm-2" id="gender-select">
-                <option value="">Select a gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <input type="button" onclick="searchbyGender()" value="Submit"><br>
-            <label for="dob">Date of Birth:</label><br>
-            <input type="Date" id="dob" name="dob" value="">
-            <input type="button" onclick="searchByDob()" value="Submit"><br>
-            <label for="dob">Height:</label><br>
-            <input type="number" id="height" name="height" placeholder="Enter persons height" value="">
-            <input type="button" onclick="searchbyHeight()" value="Submit"><br>
-            <label for="weight">Weight:</label><br>
-            <input type="number" id="weight" name="weight" placeholder="160" value="">
-            <input type="button" onclick="searchByWeight()" value="Submit"><br>
-            <label for="eyecolor">Eye Color:</label><br>
-            <input type="text" id="eyecolor" name="eyecolor" placeholder="Brown" value="">
-            <input type="button" onclick="searchbyEyeColor()" value="Submit"><br>
-            <label for="eyecolor">Occupation:</label><br>
-            <input type="text" id="occupation" name="occupation" placeholder="Programmer" value="">
-            <input type="button" onclick="searchbyOccupation()" value="Submit"><br>
-            <label for="parents">Parents:</label><br>
-            <input type="text" id="parents" name="parents" placeholder="Enter the parents name" value="">
-            <input type="button" onclick="searchByParents()" value="Submit"><br>
-            <label for="spouse">Spouse</label><br>
-            <input type="text" id="spouse" name="spouse" placeholder="Current spouse" value="">
-            <input type="button" onclick="searchBySpouse()" value="Submit"><br>
+        <form id="variousForm" class="row g-3">
+            <label for="nameForm">Search by traits</label><br>
+            <input type="number" id="id" name="id" class="form-control mb-2" placeholder="Enter an ID number" value="">
+            <input type="text" id="fname" name="fname" class="form-control mb-2" placeholder="First name" value="">
+            <input type="text" id="lname" name="lname" class="form-control mb-2" placeholder="Last name" value="">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select a gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select><br>
+            <input type="text" id="dob" name="dob" class="form-control mb-2" placeholder="Enter DOB (ex. 1/1/1948)" value="">
+            <input type="number" id="height" name="height" class="form-control mb-2" placeholder="Enter persons height" value="">
+            <input type="number" id="weight" name="weight" class="form-control mb-2" placeholder="Enter weight (ex: 160)" value="">
+            <input type="text" id="eyecolor" name="eyecolor" class="form-control mb-2" placeholder="Eye Color" value="">
+            <input type="text" id="occupation" name="occupation" class="form-control mb-2" placeholder="Occupation" value="">
+            <input type="text" id="parents" name="parents" class="form-control mb-2" placeholder="Enter the parents ID" value="">
+            <input type="text" id="spouse" name="spouse" class="form-control mb-2" placeholder="Current spouse ID" value="">
+            <input type="button" class="btn btn-danger" onclick="this.form.reset();" value="Clear Form">
+            <input type="button" class="btn btn-primary" onclick="filteredTraits()" value="Search">
         </form> 
     </form>
     <div class="table-responsive"></div>

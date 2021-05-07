@@ -43,7 +43,7 @@ const people = [
 		"currentSpouse": 260451248
 	},
 	{
-		"photo": "images/billybob.png",
+		"photo": "images/jon.png",
 		"id": 260451248,
 		"firstName": "Jon",
 		"lastName": "Walkens",
@@ -57,7 +57,7 @@ const people = [
 		"currentSpouse": 409574486
 	},
 	{
-		"photo": "images/billybob.png",
+		"photo": "images/jack.png",
 		"id": 629807187,
 		"firstName": "Jack",
 		"lastName": "Pafoy",
@@ -80,7 +80,7 @@ const people = [
 		"height": 72,
 		"weight": 256,
 		"eyeColor": "Black",
-		"occupation": "student",
+		"occupation": "Student",
 		"parents": [],
 		"currentSpouse": 629807187
 	},
@@ -89,7 +89,7 @@ const people = [
 		"id": 982411429,
 		"firstName": "Mister",
 		"lastName": "Potatoo",
-		"gender": "male",
+		"gender": "Male",
 		"dob": "12/18/1952",
 		"height": 66,
 		"weight": 170,

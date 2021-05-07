@@ -1,4 +1,5 @@
 "use strict";
+
 function searchByName(){
     // Grabbing the values from our nameForm form and inputs.
     let firstNameInput = document.forms['nameForm']['fname'].value;
@@ -20,7 +21,29 @@ function searchByName(){
     }
 }
 
-function renderTable(){
+function searchByVarious(){
+    // Values from variousForm input.
+    let firstNameInput = document.forms['variousForm']['fname'].value;
+    let lastNameInput = document.forms['variousForm']['lname'].value;
+    let genderInput = document.forms['variousForm']['gender'].value;
+    let dobInput = document.forms['variousForm']['dob'].value;
+    let heightInput = document.forms['variousForm']['height'].value;
+    let weightInput = document.forms['variousForm']['weight'].value;
+    let eyeColorInput = document.forms['variousForm']['eyecolor'].value;
+    let jobInput = document.forms['variousForm']['occupation'].value;
+    let parentsInput = document.forms['variousForm']['parents'].value;
+    let spouseInput = document.forms['variousForm']['spouse'].value;
+
+    let filteredTraits = people.filter(function (traits) {
+        if(person.firstName === firstNameInput && person.lastName === lastNameInput && person.gender === genderInput){
+            return true;
+        }
+        return false;
+    });
+
+}
+
+function renderedTable(){
     let concat = ''
     people.map(function (person){
         return concat += `<tr>
@@ -41,4 +64,4 @@ function renderTable(){
     document.getElementById("body").innerHTML = concat
 }
 
-renderTable()
+renderedTable()
