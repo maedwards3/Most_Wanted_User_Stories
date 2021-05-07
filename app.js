@@ -47,7 +47,6 @@ function renderedTable(){
     let concat = ''
     people.map(function (person){
         return concat += `<tr>
-        <td><img src="${person.photo}"></td>
         <td>${person.id}</td>
         <td>${person.firstName}</td>
         <td>${person.lastName}</td>
@@ -65,3 +64,23 @@ function renderedTable(){
 }
 
 renderedTable()
+
+function singleSearchBar() {
+    document.getElementById("singleDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
