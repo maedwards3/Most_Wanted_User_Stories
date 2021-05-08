@@ -7,45 +7,39 @@ function searchByName(){
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = people.filter(function (person) {
-        if(person.firstName === firstNameInput && person.lastName === lastNameInput){
+        if(person.firstName === firstNameInput || person.lastName === lastNameInput){
             return true;
         }
         return false;
     });
-    
-    // Rather than console logging, you need to append the filteredPeople to a table.
+    console.log(filteredPeople);
     if(filteredPeople.length > 0){
-        console.log(filteredPeople);
+        renderedTable(filteredPeople);
     }else{
-        console.log('Sorry, looks like there is no one with that name.');
+        alert("There is no one matching that name, try again.");
     }
 }
 
-function searchByVarious(){
-    // Values from variousForm input.
-    let firstNameInput = document.forms['variousForm']['fname'].value;
-    let lastNameInput = document.forms['variousForm']['lname'].value;
+function genderSearch(){
+    // Gender Search
     let genderInput = document.forms['variousForm']['gender'].value;
-    let dobInput = document.forms['variousForm']['dob'].value;
-    let heightInput = document.forms['variousForm']['height'].value;
-    let weightInput = document.forms['variousForm']['weight'].value;
-    let eyeColorInput = document.forms['variousForm']['eyecolor'].value;
-    let jobInput = document.forms['variousForm']['occupation'].value;
-    let parentsInput = document.forms['variousForm']['parents'].value;
-    let spouseInput = document.forms['variousForm']['spouse'].value;
-
-    let filteredTraits = people.filter(function (traits) {
-        if(person.firstName === firstNameInput && person.lastName === lastNameInput && person.gender === genderInput){
+    let filteredGender = people.filter(function (person) {
+        if(person.gender === genderInput){
             return true;
         }
         return false;
     });
-
+    console.log(filteredGender);
+    if(filteredPeople.length > 0){
+        renderedTable(filteredGender);
+    }else{
+        alert("No gender match");
+    }
 }
 
-function renderedTable(){
+function renderedTable(foundPeople){
     let concat = ''
-    people.map(function (person){
+    foundPeople.map(function (person){
         return concat += `<tr>
         <td><img src="${person.photo}"></td>
         <td>${person.id}</td>
@@ -64,7 +58,28 @@ function renderedTable(){
     document.getElementById("body").innerHTML = concat
 }
 
-renderedTable()
+function renderedTableMW(){
+    let concat = ''
+    people.map(function (person){
+        return concat += `<tr>
+        <td><img src="${person.photo}"></td>
+        <td>${person.id}</td>
+        <td>${person.firstName}</td>
+        <td>${person.lastName}</td>
+        <td>${person.gender}</td>
+        <td>${person.dob}</td>
+        <td>${person.height}</td>
+        <td>${person.weight}</td>
+        <td>${person.eyeColor}</td>
+        <td>${person.occupation}</td>
+        <td>${person.parents}</td>
+        <td>${person.currentSpouse}</td>
+        </tr>`
+    })
+    document.getElementById("listdata").innerHTML = concat
+}
+
+renderedTableMW()
 
 function singleSearchBar() {
     document.getElementById("singleDropdown").classList.toggle("show");
