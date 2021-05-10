@@ -20,21 +20,116 @@ function searchByName(){
     }
 }
 
+function idSearch(){
+    // Gender Search
+    let idInput = document.forms['traitsForm']['id'].value;
+
+    let filteredID = people.filter(function (person) {
+        if(person.id === idInput) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredID);
+    if(filteredID.length > 0){
+        renderedTable(filteredID);
+    }else{
+        alert("No ID match");
+    }
+}
+
 function genderSearch(){
     // Gender Search
-    let genderInput = document.forms['variousForm']['gender'].value;
+    let genderInput = document.forms['traitsForm']['gender'].value;
+
     let filteredGender = people.filter(function (person) {
-        if(person.gender === genderInput){
+        if(person.gender === genderInput) {
             return true;
         }
         return false;
     });
     console.log(filteredGender);
-    if(filteredPeople.length > 0){
+    if(filteredGender.length > 0){
         renderedTable(filteredGender);
     }else{
-        alert("No gender match");
+        alert("Please enter atleast one trait");
     }
+}
+
+function dobSearch(){
+    // Gender Search
+    let dobInput = document.forms['traitsForm']['dob'].value;
+
+    let filteredDOB = people.filter(function (person) {
+        if(person.dob === dobInput) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredDOB);
+    if(filteredDOB.length > 0){
+        renderedTable(filteredDOB);
+    }else{
+        alert("Please enter atleast one trait");
+    }
+}
+
+function heightSearch(){
+    // Gender Search
+    let heightInput = document.forms['traitsForm']['height'].value;
+
+    let filteredHeight = people.filter(function (person) {
+        if(person.height === heightInput) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredHeight);
+    if(filteredHeight.length > 0){
+        renderedTable(filteredHeight);
+    }else{
+        alert("Please enter atleast one trait");
+    }
+}
+
+function weightSearch(){
+    // Gender Search
+    let weightInput = document.forms['traitsForm']['weight'].value;
+
+    let filteredWeight = people.filter(function (person) {
+        if(person.weight === weightInput) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredWeight);
+    if(filteredWeight.length > 0){
+        renderedTable(filteredWeight);
+    }else{
+        alert("Please enter atleast one trait");
+    }
+}
+
+function eyeColorSearch(){
+    // Gender Search
+    let eyeColorInput = document.forms['traitsForm']['eyeColor'].value;
+
+    let filteredEyeColor = people.filter(function (person) {
+        if(person.eyeColor === eyeColorInput) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredEyeColor);
+    if(filteredeEyeColor.length > 0){
+        renderedTable(filteredEyeColor);
+    }else{
+        alert("Please enter atleast one trait");
+    }
+}
+
+function traitsSearch(){
+    genderSearch();
 }
 
 function renderedTable(foundPeople){
@@ -79,150 +174,7 @@ function renderedTableMW(){
     document.getElementById("listdata").innerHTML = concat
 }
 
-renderedTableMW()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+renderedTableMW();
 
 let idInput = document.forms['snglSearch']['id'].value
 let firstNameInput = document.forms['snglSearch']['fname'].value
