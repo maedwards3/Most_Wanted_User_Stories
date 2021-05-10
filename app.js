@@ -2,12 +2,12 @@
 
 function searchByName(){
     // Grabbing the values from our nameForm form and inputs.
-    let firstNameInput = document.forms['nameForm']['fname'].value;
-    let lastNameInput = document.forms['nameForm']['lname'].value;
+    let firstNameInput = document.forms['nameForm']['fname'].value.toLowerCase();
+    let lastNameInput = document.forms['nameForm']['lname'].value.toLowerCase();
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = people.filter(function (person) {
-        if(person.firstName === firstNameInput || person.lastName === lastNameInput){
+        if(person.firstName.toLowerCase() === firstNameInput || person.lastName.toLowerCase() === lastNameInput){
             return true;
         }
         return false;
@@ -21,11 +21,11 @@ function searchByName(){
 }
 
 function idSearch(){
-    // Gender Search
+    // ID Search
     let idInput = document.forms['traitsForm']['id'].value;
 
     let filteredID = people.filter(function (person) {
-        if(person.id === idInput) {
+        if(person.id === parseInt(idInput)) {
             return true;
         }
         return false;
@@ -34,16 +34,15 @@ function idSearch(){
     if(filteredID.length > 0){
         renderedTable(filteredID);
     }else{
-        alert("No ID match");
     }
 }
 
 function genderSearch(){
     // Gender Search
-    let genderInput = document.forms['traitsForm']['gender'].value;
+    let genderInput = document.forms['traitsForm']['gender'].value.toLowerCase();
 
     let filteredGender = people.filter(function (person) {
-        if(person.gender === genderInput) {
+        if(person.gender.toLowerCase() === genderInput) {
             return true;
         }
         return false;
@@ -52,12 +51,11 @@ function genderSearch(){
     if(filteredGender.length > 0){
         renderedTable(filteredGender);
     }else{
-        alert("Please enter atleast one trait");
     }
 }
 
 function dobSearch(){
-    // Gender Search
+    // DOB Search
     let dobInput = document.forms['traitsForm']['dob'].value;
 
     let filteredDOB = people.filter(function (person) {
@@ -70,16 +68,15 @@ function dobSearch(){
     if(filteredDOB.length > 0){
         renderedTable(filteredDOB);
     }else{
-        alert("Please enter atleast one trait");
     }
 }
 
 function heightSearch(){
-    // Gender Search
+    // Height Search
     let heightInput = document.forms['traitsForm']['height'].value;
 
     let filteredHeight = people.filter(function (person) {
-        if(person.height === heightInput) {
+        if(person.height === parseInt (heightInput)) {
             return true;
         }
         return false;
@@ -88,16 +85,15 @@ function heightSearch(){
     if(filteredHeight.length > 0){
         renderedTable(filteredHeight);
     }else{
-        alert("Please enter atleast one trait");
     }
 }
 
 function weightSearch(){
-    // Gender Search
+    // Weight Search
     let weightInput = document.forms['traitsForm']['weight'].value;
 
     let filteredWeight = people.filter(function (person) {
-        if(person.weight === weightInput) {
+        if(person.weight === parseInt (weightInput)) {
             return true;
         }
         return false;
@@ -106,30 +102,86 @@ function weightSearch(){
     if(filteredWeight.length > 0){
         renderedTable(filteredWeight);
     }else{
-        alert("Please enter atleast one trait");
     }
 }
 
 function eyeColorSearch(){
-    // Gender Search
-    let eyeColorInput = document.forms['traitsForm']['eyeColor'].value;
+    // Eye Color Search
+    let eyeColorInput = document.forms['traitsForm']['eyeColor'].value.toLowerCase();
 
     let filteredEyeColor = people.filter(function (person) {
-        if(person.eyeColor === eyeColorInput) {
+        if(person.eyeColor.toLowerCase() === eyeColorInput) {
             return true;
         }
         return false;
     });
     console.log(filteredEyeColor);
-    if(filteredeEyeColor.length > 0){
+    if(filteredEyeColor.length > 0){
         renderedTable(filteredEyeColor);
     }else{
-        alert("Please enter atleast one trait");
     }
 }
 
+function jobSearch(){
+    // Job Search
+    let jobInput = document.forms['traitsForm']['occupation'].value.toLowerCase();
+
+    let filteredJob = people.filter(function (person) {
+        if(person.occupation.toLowerCase() === jobInput) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredJob);
+    if(filteredJob.length > 0){
+        renderedTable(filteredJob);
+    }else{
+    }
+}
+
+function parentsSearch(){
+    // Parent Search
+    let parentsInput = document.forms['traitsForm']['parents'].value;
+
+    let filteredParents = people.filter(function (person) {
+        if(person.parents === parseInt (parentsInput)) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredParents);
+    if(filteredParents.length > 0){
+        renderedTable(filteredParents);
+    }else{
+    }
+}
+
+function spouseSearch(){
+    // Spouse Search
+    let spouseidInput = document.forms['traitsForm']['currentSpouse'].value;
+
+    let filteredSpouse = people.filter(function (person) {
+        if(person.currentSpouse === parseInt (spouseidInput)) {
+            return true;
+        }
+        return false;
+    });
+    console.log(filteredSpouse);
+    if(filteredSpouse.length > 0){
+        renderedTable(filteredSpouse);
+    }else{
+    }
+}
+
+
 function traitsSearch(){
+    idSearch();
     genderSearch();
+    dobSearch();
+    heightSearch();
+    weightSearch();
+    eyeColorSearch();
+    jobSearch();
 }
 
 function renderedTable(foundPeople){
