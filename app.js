@@ -174,4 +174,4 @@ function renderedTableMW(){
     document.getElementById("listdata").innerHTML = concat
 }
 
-renderedTableMW()
+renderedTableMW();
