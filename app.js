@@ -23,15 +23,16 @@ function searchByName(){
 function genderSearch(){
     // Gender Search
     let genderInput = document.forms['variousForm']['gender'].value;
-    let filteredGender = people.filter(function (person) {
+
+    let filteredPeople = people.filter(function (person) {
         if(person.gender === genderInput){
             return true;
         }
         return false;
     });
-    console.log(filteredGender);
+    console.log(filteredPeople);
     if(filteredPeople.length > 0){
-        renderedTable(filteredGender);
+        renderedTable(filteredPeople);
     }else{
         alert("No gender match");
     }
