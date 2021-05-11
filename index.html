@@ -91,7 +91,7 @@
     </div>
     <br>
     <p>
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseVarious" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-success" data-bs-toggle="collapse" href="#collapseVarious" role="button" aria-expanded="false" aria-controls="collapseExample">
         Search By Traits
       </a>
 
@@ -101,18 +101,12 @@
           <form id="traitsForm">
               <label for="traitsForm">Search by traits</label><br>
               <input type="number" id="id" name="id" class="form-control mb-2" placeholder="Enter an ID number" value="">
-              <select id="gender" name="gender" class="form-select" aria-label="Default select example">
-                <option selected>Select a gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select><br>
+              <input type="text" id="gender" name="gender" class="form-control mb-2" placeholder="Male or Female" value="">
               <input type="text" id="dob" name="dob" class="form-control mb-2" placeholder="Enter DOB (ex. 1/1/1948)" value="">
               <input type="number" id="height" name="height" class="form-control mb-2" placeholder="Enter persons height" value="">
               <input type="number" id="weight" name="weight" class="form-control mb-2" placeholder="Enter weight (ex: 160)" value="">
-              <input type="text" id="eyecolor" name="eyecolor" class="form-control mb-2" placeholder="Enter eye color" value="">
+              <input type="text" id="eyeColor" name="eyeColor" class="form-control mb-2" placeholder="Enter eye color" value="">
               <input type="text" id="occupation" name="occupation" class="form-control mb-2" placeholder="Occupation" value="">
-              <input type="text" id="parents" name="parents" class="form-control mb-2" placeholder="Enter the parents ID" value="">
-              <input type="text" id="spouse" name="spouse" class="form-control mb-2" placeholder="Current spouse ID" value="">
               <input type="button" class="btn btn-danger" onclick="this.form.reset();" value="Clear Form">
               <input type="button" class="btn btn-primary" onclick="traitsSearch()" value="Search">
                 </form>
