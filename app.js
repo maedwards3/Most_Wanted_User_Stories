@@ -25,7 +25,7 @@ function idSearch(){
     let idInput = document.forms['traitsForm']['id'].value;
 
     let filteredID = people.filter(function (person) {
-        if(person.id === idInput) {
+        if(person.id === parseint(idInput)) {
             return true;
         }
         return false;
@@ -79,7 +79,7 @@ function heightSearch(){
     let heightInput = document.forms['traitsForm']['height'].value;
 
     let filteredHeight = people.filter(function (person) {
-        if(person.height === heightInput) {
+        if(person.height === parseInt(heightInput)) {
             return true;
         }
         return false;
@@ -97,7 +97,7 @@ function weightSearch(){
     let weightInput = document.forms['traitsForm']['weight'].value;
 
     let filteredWeight = people.filter(function (person) {
-        if(person.weight === weightInput) {
+        if(person.weight === parseInt(weightInput)) {
             return true;
         }
         return false;

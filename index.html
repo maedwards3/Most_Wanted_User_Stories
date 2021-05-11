@@ -37,26 +37,39 @@
               <p class="card-text">This project was built by <a href="https://github.com/maedwards3" target="_blank">Michael Edwards</a> & <a href="https://github.com/austindflatt" target="_blank">Austin Flatt</a> using JavaScript, HTML, CSS, & Bootstrap.</p>
             </div>
           </div><br>
-          
-    <div id="snglSearch" class="input-group mb-3">
-        <button type="button" class="btn btn-outline-secondary" onclick="singleSearchBar()">Search by:</button>
-        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="visually-hidden">Toggle Dropdown</span>
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#id">ID</a></li>
-            <li><a class="dropdown-item" href="#firstName">First Name</a></li>
-            <li><a class="dropdown-item" href="#lastname">Last Name</a></li>
-            <li><a class="dropdown-item" href="#dob">DOB</a></li>
-            <li><a class="dropdown-item" href="#height">Height</a></li>
-            <li><a class="dropdown-item" href="#weight">Weight</a></li>
-            <li><a class="dropdown-item" href="#eyeColor">Eye Color</a></li>
-            <li><a class="dropdown-item" href="#occupation">Ocupation</a></li>
-            <li><a class="dropdown-item" href="#parents">Parents</a></li>
-            <li><a class="dropdown-item" href="#currentSpouse">Current Spouse</a></li>
-        </ul>
-        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-    </div>
+
+
+          <p>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseSingle" role="button" aria-expanded="false" aria-controls="collapseSingle">
+              Search by single criteria
+            </a>
+            
+          </p>
+          <div class="collapse" id="collapseSingle">
+            <div class="card card-body">
+                <form id="snglSearch" class="input-group mb-3">
+                    <div class="input-group mb-3">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Search by:</button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">ID</a></li>
+                          <li><a class="dropdown-item" href="#">First Name</a></li>
+                          <li><a class="dropdown-item" href="#">Last Name</a></li>
+                          <li><a class="dropdown-item" href="#dob">DOB</a></li>
+                          <li><a class="dropdown-item" href="#height">Height</a></li>
+                          <li><a class="dropdown-item" href="#weight">Weight</a></li>
+                          <li><a class="dropdown-item" href="#eyeColor">Eye Color</a></li>
+                          <li><a class="dropdown-item" href="#occupation">Ocupation</a></li>
+                          <li><a class="dropdown-item" href="#parents">Parents</a></li>
+                          <li><a class="dropdown-item" href="#currentSpouse">Current Spouse</a></li>
+                        </ul>
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter search criteria" value="">
+                        <input type="button" class="btn btn-danger" onclick="this.form.reset();" value="Clear Form">
+                        <input type="button" class="btn btn-primary" onclick="singleSearchBar()" value="Search">
+                    </div>
+                </form>
+            </div>
+          </div>
+    
 
     <br>
     <p>
